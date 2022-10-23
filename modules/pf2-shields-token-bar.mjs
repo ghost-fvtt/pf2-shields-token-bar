@@ -27,6 +27,8 @@ Hooks.once("init", () => {
   );
 });
 
+Hooks.on("updateItem", onUpdateItem);
+
 /**
  * @param {Actor['modifyTokenAttribute']} wrapped
  * @param {string} attribute
@@ -83,4 +85,20 @@ function getBarAttribute(wrapped, barName, { alternative } = {}) {
     };
   }
   return wrapped.call(this, barName, { alternative });
+}
+
+function onUpdateItem(item) {
+  if (
+    item.actor &&
+    !item.actor.isToken &&
+    item.type === "armor" &&
+    item.system.category === "shield"
+  ) {
+    const tokens = item.actor.getActiveTokens(false, true);
+    for (const t of tokens) {
+      if (t.parent.isView) {
+        t.object.drawBars();
+      }
+    }
+  }
 }
