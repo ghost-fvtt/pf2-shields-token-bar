@@ -1,0 +1,48 @@
+{
+  "id": "pf2-shields-token-bar",
+  "title": "PF2 Shields Token Bar",
+  "description": "A module for Foundry Virtual Tabletop that makes the shield HP in Pathfinder Second Edition a properly editable token resource.",
+  "authors": [
+    {
+      "name": "Johannes Loher",
+      "email": "johannes.loher@fg4f.de",
+      "discord": "ghost#2000",
+      "ko-fi": "ghostfvtt"
+    }
+  ],
+  "url": "this is auto replaced",
+  "license": "this is auto replaced",
+  "readme": "this is auto replaced",
+  "bugs": "this is auto replaced",
+  "version": "This is auto replaced",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "10"
+  },
+  "esmodules": ["modules/pf2-shields-token-bar.mjs"],
+  "relationships": {
+    "systems": [
+      {
+        "id": "pf2e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "4.2.5",
+          "verified": "4.2.5"
+        }
+      }
+    ],
+    "requires": [
+      {
+        "id": "lib-wrapper",
+        "type": "module",
+        "compatibility": {
+          "minimum": "1.12.7.0",
+          "verified": "1.12.7.0"
+        }
+      }
+    ]
+  },
+  "manifest": "this is auto replaced",
+  "download": "this is auto replaced",
+  "manifestPlusVersion": "1.2.0"
+}
